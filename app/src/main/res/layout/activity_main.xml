@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="80dp"
+
+
+            android:text="Stop watch app"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/clock"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+
+
+            android:layout_marginTop="52dp"
+            android:src="@drawable/clock"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/clocktime"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="00:00:00"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="154dp" />
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="48dp"
+
+
+            android:background="?android:attr/listDivider"
+
+            app:layout_constraintBottom_toBottomOf="@+id/clocktime"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/clocktime"
+            app:layout_constraintVertical_bias="0.397" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/run"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@color/black"
+            android:text="Run"
+            android:textSize="40sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintStart_toStartOf="@+id/divider"
+            app:layout_constraintTop_toBottomOf="@+id/divider"
+            app:layout_editor_absoluteX="16dp"
+            tools:ignore="MissingConstraints" />
+
+        <Chronometer
+            android:id="@+id/chronometer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="8dp"
+            android:fontFamily="serif-monospace"
+            android:text="00:00:00"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="@+id/run"
+
+            app:layout_constraintStart_toStartOf="@+id/run"
+            app:layout_constraintTop_toBottomOf="@+id/run" />
+
+        <Button
+            android:layout_width="335dp"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="83dp"
+            android:backgroundTint="@color/black"
+            android:text="Lab"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/chronometer2" />
+
+        <ListView
+            android:layout_width="337dp"
+            android:layout_height="62dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="37dp"
+            tools:layout_editor_absoluteY="569dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
